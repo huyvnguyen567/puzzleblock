@@ -1,0 +1,31 @@
+{
+    "Items": [
+        {
+            "id": 23,
+            "name": "Straight(Clone)",
+            "position": {
+                "x": 6.5,
+                "y": -4.0,
+                "z": 0.0
+            }
+        },
+        {
+            "id": 10,
+            "name": "L-Short 3(Clone)",
+            "position": {
+                "x": 3.5,
+                "y": -4.0,
+                "z": 0.0
+            }
+        },
+        {
+            "id": 13,
+            "name": "Left Zig-Zag(Clone)",
+            "position": {
+                "x": 0.5,
+                "y": -4.0,
+                "z": 0.0
+            }
+        }
+    ]
+}

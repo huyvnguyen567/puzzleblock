@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 45518b79d07d8ff4ea4420f9c5c6c395
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_0"
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 3339
+        width: 1330
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463ae3834d9b6be45bac4f31a5cfdcce
+      internalID: 741159723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_1"
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 3376
+        width: 586
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b33b35ce6dc0fc49acdd3ac99b81d5b
+      internalID: 1479183275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_2"
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 3313
+        width: 1328
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106e9a8195c34b149b77c7aa5462d6e5
+      internalID: -1810411620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_3"
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 2534
+        width: 1330
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9952fb18d836f446beb13eb000dfdd8
+      internalID: 1849549802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_4"
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 2757
+        width: 586
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44068ee2d29248348bc7dead71ee3594
+      internalID: 1719512334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_5"
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 2485
+        width: 1328
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b05275d9af0144299aff967a9a8043
+      internalID: -896247639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_6"
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1741
+        width: 1330
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5bab5b85e7b304483449f2f0c8673d
+      internalID: 2046439341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_7"
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 2128
+        width: 586
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02004d14e2bae224fa8c237626cd036b
+      internalID: -342440153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_8"
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 1710
+        width: 1328
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7525a9b055a834bbd1ec4df94a6975
+      internalID: 1650418301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_9"
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1507
+        width: 586
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5646602f6e728f74fb4bc9a1f98b91a6
+      internalID: 2130477003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_10"
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 1440
+        width: 1443
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319d31d824d894b44badc5a477a66346
+      internalID: 629938998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_11"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 34
+        width: 2207
+        height: 1461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb90468ca1618b4ca554aeb8261d0e4
+      internalID: -1084922460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_12"
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 804
+        width: 584
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb78185c377f1a649af6c83e3d7054df
+      internalID: 1431368802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_13"
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 802
+        width: 584
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e20c3ca017249042bf3fd39cdfa81fd
+      internalID: -465759821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_14"
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 165
+        width: 584
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79f91f9dd1a2824f9e87adc1c95eb73
+      internalID: -189016480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014big set buttons icons elements_5100112_15"
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 165
+        width: 584
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1769f548fd3ac664288070595abb74e7
+      internalID: 1128625981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_6": 2046439341
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_8": 1650418301
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_11": -1084922460
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_5": -896247639
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_0": 741159723
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_13": -465759821
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_3": 1849549802
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_7": -342440153
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_4": 1719512334
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_9": 2130477003
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_12": 1431368802
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_1": 1479183275
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_10": 629938998
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_15": 1128625981
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_14": -189016480
+      "\u2014Pngtree\u2014big set buttons icons elements_5100112_2": -1810411620
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
