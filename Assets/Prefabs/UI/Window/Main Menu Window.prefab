@@ -266,7 +266,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< HEAD
 --- !u!1 &6163303145818814539
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +335,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -382,7 +381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264, y: -100}
+  m_AnchoredPosition: {x: 235, y: -100}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5448755748122704634
@@ -416,19 +415,17 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
-=======
->>>>>>> parent of 946ce40 (chen quang cao va fix 1 so loi)
 --- !u!1 &6546698185789463225
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +592,8 @@ RectTransform:
   - {fileID: 3896132728905590176}
   - {fileID: 4532216172711170900}
   - {fileID: 6612619403824475481}
+  - {fileID: 1207780741153188866}
+  - {fileID: 8434517704371891653}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -620,6 +619,8 @@ MonoBehaviour:
   - {fileID: 3896132728905590176}
   - {fileID: 4532216172711170900}
   - {fileID: 6612619403824475481}
+  highScoreText: {fileID: 8488380523490256347}
+  goldText: {fileID: 7681961157405850667}
 --- !u!1 &8907817728014064408
 GameObject:
   m_ObjectHideFlags: 0

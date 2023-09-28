@@ -7,7 +7,6 @@ using UnityEngine.Events;
 
 public class ShopPopup : MonoBehaviour
 {
-    [SerializeField] private Text goldText;
     [SerializeField] private Button freeButton;
     [SerializeField] private Color colorFreeButton;
     private UnityAction<bool> x;
