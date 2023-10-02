@@ -233,7 +233,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
     {  
         if (CanSnap())
         {
-            SoundManager.Instance.PlaySfx(SfxType.OnBoard);
+            SoundManager.Instance.PlaySfx(SfxType.OnBoard); 
             GameController.Instance.IncreaseScore(transform.childCount);
             GameController.Instance.SnapTetrominoToGrid(transform);
             GameController.Instance.TetrominoUsed(transform.gameObject);
