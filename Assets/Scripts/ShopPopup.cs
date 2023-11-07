@@ -44,7 +44,7 @@ public class ShopPopup : MonoBehaviour
         {
             DataManager.Instance.Gold -= price;
             DataManager.Instance.SaveGold();
-            DataManager.Instance.RotateQuantity++;
+            DataManager.Instance.RotateQuantity += 5;
             DataManager.Instance.SaveRotateQuantity();
             UpdateGoldText();
         }
@@ -60,7 +60,7 @@ public class ShopPopup : MonoBehaviour
         {
             DataManager.Instance.Gold -= price;
             DataManager.Instance.SaveGold();
-            DataManager.Instance.SwapQuantity++;
+            DataManager.Instance.SwapQuantity += 5;
             DataManager.Instance.SaveSwapQuantity();
             UpdateGoldText();
         }

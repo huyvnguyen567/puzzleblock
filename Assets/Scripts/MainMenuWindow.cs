@@ -67,12 +67,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenuWindow : MonoBehaviour
 {
     [SerializeField] private RectTransform[] scaleTransforms;
-    [SerializeField] private Text highScoreText;
-    [SerializeField] private Text goldText;
+    [SerializeField] private TMP_Text highScoreText;
+    [SerializeField] private TMP_Text goldText;
 
     private void Awake()
     {
@@ -87,7 +88,7 @@ public class MainMenuWindow : MonoBehaviour
     private void OnEnable()
     {
         highScoreText.text = "High Score: " + DataManager.Instance.HighScore;
-        goldText.text = "Gold: " + DataManager.Instance.Gold;
+        UpdateGoldText();
 
     }
     private void Start()
@@ -103,7 +104,7 @@ public class MainMenuWindow : MonoBehaviour
     }
     public void UpdateGoldText()
     {
-        goldText.text = "Gold: " + DataManager.Instance.Gold;
+        goldText.text = $"{DataManager.Instance.Gold}";
     }
     public void OnStartClick()
     {

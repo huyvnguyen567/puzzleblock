@@ -142,7 +142,7 @@ public class GameController : MonoBehaviour
         ChangeColorTileGrid(6, 3);
         ChangeColorTileGrid(3, 6);
 
-        Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 2f, -10);
+        Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 2.08f, -10);
     }
     public void ChangeColorTileGrid(int startX, int startY)
     {

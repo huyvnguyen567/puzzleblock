@@ -9,7 +9,7 @@ public class GameplayWindow : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
-    [SerializeField] private Text changeCountText;
+    [SerializeField] private TMP_Text changeCountText;
     [SerializeField] private Button btnPause;
     [SerializeField] private Slider rewardProcessSlider;
     [SerializeField] private Text rewardText;
@@ -43,8 +43,8 @@ public class GameplayWindow : MonoBehaviour
         //    DataManager.Instance.Score = x;
         //    scoreText.text = "Score: " + DataManager.Instance.Score;
         //}, DataManager.Instance.Score, 0.5f);
-        scoreText.text = "Score: " + DataManager.Instance.Score;
-        highScoreText.text = "High Score: " +DataManager.Instance.HighScore;
+        scoreText.text = $"{DataManager.Instance.Score}";
+        highScoreText.text = $"{DataManager.Instance.HighScore}";
     }
 
     public void UpdateChangeCount()

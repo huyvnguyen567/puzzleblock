@@ -162,7 +162,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         }
         else
         {
-            transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            transform.localScale = new Vector3(0.4f, 0.4f, 1);
             transform.position = initialPosition;
         }
        

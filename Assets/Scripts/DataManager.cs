@@ -202,7 +202,6 @@ public class DataManager : MonoBehaviour
         string jsonData = JsonHelper.ToJson(savedTetrominoList,true);
         //System.IO.File.WriteAllText("tetromino_data.json", jsonData);
         PlayerPrefs.SetString("tetromino_data", jsonData);
-
     }
 
     public void ResetTetrominoData()

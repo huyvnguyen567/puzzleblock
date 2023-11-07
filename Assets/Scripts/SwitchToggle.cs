@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class SwitchToggle : MonoBehaviour
 {
     [SerializeField]  RectTransform uiHandleRectTransform;
     [SerializeField] Color backgroundActiveColor;
     [SerializeField] Color handleActiveColor;
-    public Text rotateCountText;
+    public TMP_Text rotateCountText;
 
     Image backgroundImage, handleImage;
     Color backgrounDefaultColor, handleDefaultColor;
