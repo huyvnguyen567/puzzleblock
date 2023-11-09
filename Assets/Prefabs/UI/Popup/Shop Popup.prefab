@@ -2344,6 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeButton: {fileID: 5365675386533950171}
   colorFreeButton: {r: 1, g: 1, b: 1, a: 1}
+  backgroundRect: {fileID: 6697055549476859681}
 --- !u!1 &3962833347864802124
 GameObject:
   m_ObjectHideFlags: 0

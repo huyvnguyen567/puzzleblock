@@ -725,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 4116137463529302262}
+  backgroundRect: {fileID: 4116137464462529950}
 --- !u!222 &640133580999863128
 CanvasRenderer:
   m_ObjectHideFlags: 0

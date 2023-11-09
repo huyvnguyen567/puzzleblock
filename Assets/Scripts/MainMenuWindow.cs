@@ -138,7 +138,14 @@ public class MainMenuWindow : MonoBehaviour
     }
     public void OnShopClick()
     {
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
         UIController.Instance.ShowPopup(PopupType.Shop, true);
+    }
+
+    public void OnSettingClick()
+    {
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
+        UIController.Instance.ShowPopup(PopupType.Setting, true);
     }
     public void ActiveMainMenuWindow(bool isActive)
     {

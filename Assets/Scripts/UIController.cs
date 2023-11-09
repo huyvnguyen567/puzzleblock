@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject gamePausePopupPrefab;
     [SerializeField] private GameObject playOptionPopupPrefab;
     [SerializeField] private GameObject shopPopupPrefab;
+    [SerializeField] private GameObject settingPopupPrefab;
     public GameObject scorePopupPrefab;
     public GameObject textPopupPrefab;
     public GameObject gamePlayWindow;
@@ -23,6 +24,7 @@ public class UIController : MonoBehaviour
     private GameObject gamePausePopup;
     private GameObject playOptionPopup;
     private GameObject shopPopup;
+    private GameObject settingPopup;
 
     private void Awake()
     {
@@ -48,6 +50,7 @@ public class UIController : MonoBehaviour
         gamePausePopup = Instantiate(gamePausePopupPrefab, parentPopup.gameObject.transform);
         playOptionPopup = Instantiate(playOptionPopupPrefab, parentPopup.gameObject.transform);
         shopPopup = Instantiate(shopPopupPrefab, parentPopup.gameObject.transform);
+        settingPopup = Instantiate(settingPopupPrefab, parentPopup.gameObject.transform);
     }
 
     public void ShowWindow(WindowType type, bool isActive)
@@ -79,6 +82,9 @@ public class UIController : MonoBehaviour
             case PopupType.Shop:
                 shopPopup.GetComponent<ShopPopup>().ActivePopup(isActive);
                 break;
+            case PopupType.Setting:
+                settingPopup.GetComponent<SettingPopup>().ActivePopup(isActive);
+                break;
         }
     }
    
@@ -89,5 +95,5 @@ public enum WindowType
 }
 public enum PopupType
 {
-    GameOver, Score, GamePause, PlayOption, Shop
+    GameOver, Score, GamePause, PlayOption, Shop, Setting
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using DG.Tweening;
 
 
 public class ShopPopup : MonoBehaviour
 {
     [SerializeField] private Button freeButton;
     [SerializeField] private Color colorFreeButton;
+    [SerializeField] private RectTransform backgroundRect;
     private UnityAction<bool> x;
     private Vector2 centerPosition;
 
@@ -27,6 +29,8 @@ public class ShopPopup : MonoBehaviour
     {
         UpdateGoldText();
         freeButton.GetComponent<Image>().color = Color.red;
+        backgroundRect.localScale = Vector3.one;
+        backgroundRect.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 0.2f).From();
     }
 
     public void ChangeColorFreeButton()
@@ -77,7 +81,13 @@ public class ShopPopup : MonoBehaviour
     }
     public void OnClosePopup()
     {
-        UIController.Instance.ShowPopup(PopupType.Shop, false);
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
+        // Đặt một scale nhỏ hơn để thu nhỏ popup
+        Vector3 smallScale = new Vector3(0.8f, 0.8f, 0.8f);
+
+        // Sử dụng DOTween để tạo tween để thu nhỏ popup
+        backgroundRect.transform.DOScale(smallScale, 0.3f).OnComplete(() => { UIController.Instance.ShowPopup(PopupType.Shop, false); });
+        
     }
 
     public void ShowAds(string name)

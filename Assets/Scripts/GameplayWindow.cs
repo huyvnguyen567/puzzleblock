@@ -12,7 +12,13 @@ public class GameplayWindow : MonoBehaviour
     [SerializeField] private TMP_Text changeCountText;
     [SerializeField] private Button btnPause;
     [SerializeField] private Slider rewardProcessSlider;
-    [SerializeField] private Text rewardText;
+    //[SerializeField] private Text rewardText;
+    [SerializeField] private Image starImage;
+    [SerializeField] private Sprite swapSprite;
+    [SerializeField] private Sprite rotateSprite;
+    [SerializeField] private Sprite goldSprite;
+    [SerializeField] private Sprite starSprite;
+
     private void Awake()
     {
         SoundManager.Instance.PlayMusic(MusicType.GamePlay);
@@ -27,9 +33,16 @@ public class GameplayWindow : MonoBehaviour
         rewardProcessSlider.value = PlayerPrefs.GetFloat("ProcessReward", 0);
 
     }
-    private void Update()
+    void ChangeSpriteWithDotween(Sprite newSprite)
     {
-
+        // Sử dụng DOTween để thay đổi sprite
+        starImage.DOFade(0f, 0.5f) // Phai hoàn toàn hình ảnh hiện tại
+             .OnComplete(() =>
+             {
+                 starImage.sprite = newSprite; // Thay đổi sprite thành sprite mới
+                 starImage.rectTransform.sizeDelta = new Vector2(110, 110);
+                 starImage.DOFade(1f, 0.5f); // Hiển thị hình ảnh mới
+             });
     }
     public void ActiveGamePlayWindow(bool isActive)
     {
@@ -61,6 +74,7 @@ public class GameplayWindow : MonoBehaviour
     
         if (targetValue >= 1)
         {
+            SoundManager.Instance.PlaySfx(SfxType.Complete);
             PlayerPrefs.SetFloat("ProcessReward", 0);
             int randomReward = Random.Range(0, 3);
             HandleReward(randomReward);
@@ -69,6 +83,7 @@ public class GameplayWindow : MonoBehaviour
     }
     public void OnClickPause()
     {
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
         if (!GameController.Instance.GameOver)
         {
             UIController.Instance.ShowPopup(PopupType.GamePause, true);
@@ -103,20 +118,23 @@ public class GameplayWindow : MonoBehaviour
         switch (rewardType)
         {
             case 0:
-                rewardText.text = "+ 1 Lượt Xoay";
+                //rewardText.text = "+ 1 Lượt Xoay";
+                ChangeSpriteWithDotween(rotateSprite);
                 DataManager.Instance.RotateQuantity++;
                 DataManager.Instance.SaveRotateQuantity();
                 var toggle = FindObjectOfType<Toggle>().GetComponent<SwitchToggle>();
                 toggle.UpdateRotateCount();
                 break;
             case 1:
-                rewardText.text = "+ 1 Lượt Đổi";
+                //rewardText.text = "+ 1 Lượt Đổi";
+                ChangeSpriteWithDotween(swapSprite);
                 DataManager.Instance.SwapQuantity++;
                 DataManager.Instance.SaveSwapQuantity();
                 UpdateChangeCount();
                 break;
             case 2:
-                rewardText.text = "+ 100 Vàng";
+                //rewardText.text = "+ 100 Vàng";
+                ChangeSpriteWithDotween(goldSprite);
                 DataManager.Instance.Gold += 100;
                 DataManager.Instance.SaveGold();
                 break;
@@ -126,6 +144,8 @@ public class GameplayWindow : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         rewardProcessSlider.DOValue(0, 1);
-        rewardText.text = "Quà";
+        starImage.sprite = starSprite;
+        starImage.SetNativeSize();
+        //rewardText.text = "Quà";
     }
 }

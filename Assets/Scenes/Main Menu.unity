@@ -510,6 +510,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1bf2dbc5f99c4814bb6544a30b7f5be2, type: 3}
   - {fileID: 8300000, guid: 189019b2faafdda4f8f3b5bc1308b1d7, type: 3}
   - {fileID: 8300000, guid: 2eb4f296a97145d4fa17544d6a807b64, type: 3}
+  - {fileID: 8300000, guid: f96c106567a222844ad311a097d24f5f, type: 3}
 --- !u!4 &614686692
 Transform:
   m_ObjectHideFlags: 0
@@ -743,7 +744,7 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
@@ -1000,6 +1001,7 @@ MonoBehaviour:
   gamePausePopupPrefab: {fileID: 4116137464039247445, guid: 842bed10ca2c36a49b97e1f589a317eb, type: 3}
   playOptionPopupPrefab: {fileID: 4954141563248308190, guid: f8848f5bd06d1a645a74e8d4f2652296, type: 3}
   shopPopupPrefab: {fileID: 3664136006499333735, guid: 812870758b8466f48b06d43a0d76927c, type: 3}
+  settingPopupPrefab: {fileID: 1758329101987504284, guid: 1a9c158afb3cf7440bf8df2c8c845959, type: 3}
   scorePopupPrefab: {fileID: 2902613423747635325, guid: e57eea99deac59b4bbbbba6d9cff49c1, type: 3}
   textPopupPrefab: {fileID: 2902613423747635325, guid: e8c299fa55f2b234c96d17c09aa39f38, type: 3}
   gamePlayWindow: {fileID: 0}

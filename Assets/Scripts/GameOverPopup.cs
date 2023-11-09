@@ -20,6 +20,7 @@ public class GameOverPopup : MonoBehaviour
     }
     public void OnReplayClick()
     {
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
         DataManager.Instance.ResetScore();
         DataManager.Instance.ResetTile();
         DataManager.Instance.ResetTetrominoData();
@@ -27,6 +28,7 @@ public class GameOverPopup : MonoBehaviour
     }
     public void OnMainMenuClick()
     {
+        SoundManager.Instance.PlaySfx(SfxType.ButtonClick);
         DataManager.Instance.ResetScore();
         DataManager.Instance.ResetTile();
         DataManager.Instance.ResetTetrominoData();

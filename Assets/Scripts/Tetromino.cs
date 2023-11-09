@@ -44,6 +44,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         {
             initialTilePositions[i] = transform.GetChild(i).position;
         }
+        //gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 1);
 
     }
     private void Update()
@@ -109,7 +110,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
             {
                 target += offset;
                 transform.position = target;
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(0.8f, 0.8f, 1);
             }
 
             DataManager.Instance.ScoreAmount = 0;
@@ -125,7 +126,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
             canRotate = false;
             var target = Camera.main.ScreenToWorldPoint(eventData.position);
             target += offset;
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.8f, 0.8f, 1);
             target.z = -2;
             transform.position = target;
             HighLightColor();
@@ -134,6 +135,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
     public void OnPointerUp(PointerEventData eventData)
     {
+
         if (!GameController.Instance.IsPlaced(transform.gameObject))
         {
             if (gameObject.CompareTag("Square"))
@@ -162,7 +164,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         }
         else
         {
-            transform.localScale = new Vector3(0.4f, 0.4f, 1);
+            transform.localScale = new Vector3(0.32f, 0.32f, 1);
             transform.position = initialPosition;
         }
        
@@ -177,7 +179,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
             {
                 var origin = tile.position;
                 RaycastHit2D hit = Physics2D.Raycast(origin, transform.forward, 10, layerMask);
-                if (hit.collider == null || !GameController.Instance.IsGridCellEmpty(tile.position))
+                if (hit.collider == null || !GameController.Instance.IsGridCellEmpty(hit.collider.transform.position / 0.8f)) 
                 {
                     
                 }
@@ -202,7 +204,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         {
             var origin = tile.position;
             RaycastHit2D hit = Physics2D.Raycast(origin, transform.forward, 10, layerMask);
-            if (hit.collider == null || !GameController.Instance.IsGridCellEmpty(tile.position))
+            if (hit.collider == null || !GameController.Instance.IsGridCellEmpty(hit.collider.transform.position / 0.8f))
             {
                 return false;
             }
@@ -212,7 +214,10 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
     private IEnumerator SnapAndCheckGameOver()
     {
         SnapToValidGridCell();
-        yield return new WaitForSeconds(0.1f);
+        //transform.position *= 0.8f;
+
+        //transform.localScale *= 0.8f;
+       yield return new WaitForSeconds(0.1f);
         
         if (rotated && !GameController.Instance.currentTetrominos.Contains(gameObject))
         {
@@ -261,7 +266,7 @@ public class Tetromino : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
         {
             if (!GameController.Instance.IsPlaced(transform.gameObject))
             {
-                transform.localScale = new Vector3(0.4f, 0.4f, 1);
+                transform.localScale = new Vector3(0.32f, 0.32f, 1);
                 transform.position = initialPosition;
             }
         } 

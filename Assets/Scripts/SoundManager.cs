@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,23 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnEnable()
+    {
+        musicSource.volume = DataManager.Instance.LoadMusicVolume();
+        sfxSource.volume = DataManager.Instance.LoadSFXVolume();
+    }
+    public void ChangeSoundVolume(float volume)
+    {
+        sfxSource.volume = volume;
+        DataManager.Instance.SaveSFXVolume(sfxSource.volume);
+    }
+
+    public void ChangeMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+        DataManager.Instance.SaveMusicVolume(musicSource.volume);
+    }
+
     public void PlaySfx(SfxType type)
     {
         switch (type)
@@ -34,6 +51,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case SfxType.GameOver:
                 sfxSource.PlayOneShot(sfxsSound[3]);
+                break;
+            case SfxType.Complete:
+                sfxSource.PlayOneShot(sfxsSound[4]);
                 break;
         }
     }
@@ -54,7 +74,7 @@ public class SoundManager : MonoBehaviour
 }
 public enum SfxType
 {
-    ButtonClick, TetrominoClick, OnBoard, GameOver
+    ButtonClick, TetrominoClick, OnBoard, GameOver, Complete
 }
 public enum MusicType
 {

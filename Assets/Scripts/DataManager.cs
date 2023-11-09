@@ -154,7 +154,8 @@ public class DataManager : MonoBehaviour
             {
                 //Debug.Log("position: " + tile);
                 Tile tileObject = Instantiate(tilePrefab, tile, Quaternion.identity);
-                GameController.Instance.grid[(int)tile.x, (int)tile.y] = tileObject.transform;
+                GameController.Instance.grid[Mathf.RoundToInt(tile.x / 0.8f), Mathf.RoundToInt(tile.y / 0.8f)] = tileObject.transform;
+                Debug.Log(Mathf.RoundToInt(tile.x / 0.8f) + " " + Mathf.RoundToInt(tile.y / 0.8f));
             }
          
         }
@@ -188,7 +189,26 @@ public class DataManager : MonoBehaviour
         swapQuantity = PlayerPrefs.GetInt("swap", 5);
     }
 
-  
+    public void SaveMusicVolume(float volume)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    } 
+    
+    public float LoadMusicVolume()
+    {
+        return PlayerPrefs.GetFloat("MusicVolume", 1f); // Giá trị mặc định là 1 (ââm lượng tối đa)
+    }
+
+    public void SaveSFXVolume(float volume)
+    {
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+    
+    public float LoadSFXVolume()
+    {
+        return PlayerPrefs.GetFloat("SFXVolume", 1f); // Giá trị mặc định là 1 (ââm lượng tối đa)
+    }
+
     [System.Serializable]
     public class TetrominoData
     {

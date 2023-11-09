@@ -6,13 +6,19 @@ using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
-    
+
     public static GameController Instance;
     public Transform gridContainer; // Container chứa các ô trong lưới grid
     private Transform spawnPoints;
+    private Transform board;
+
+    [SerializeField] private GameObject background;
+
     [SerializeField] private ObjectPooling pool;
     [SerializeField] private GameObject gridContainPrefab;
     [SerializeField] private GameObject spawnPointsPrefab;
+    [SerializeField] private GameObject boardPrefab;
+
     [SerializeField] private GameObject tilePrefab; // Prefab của ô (tile)
     [SerializeField] private int width = 9;
     [SerializeField] private int height = 9;
@@ -77,12 +83,15 @@ public class GameController : MonoBehaviour
         // Khởi tạo lưới grid và các thông tin liên quan
         InitializeGrid();
         // Sinh ngẫu nhiên các khối tetromino
-       
+        gridContainer.localScale = new Vector3(0.8f, 0.8f, 1);
+        board.localScale *= 0.8f;
+        board.position *= 0.8f;
+        background.transform.position *= 0.8f;
+        //spawnPoints.localScale = new Vector3(0.8f, 0.8f, 1);
 
-        //DataManager.Instance.Score = 0;
         UIController.Instance.ShowWindow(WindowType.MainMenu, false);
         UIController.Instance.ShowWindow(WindowType.GamePlay, true);
-       
+
         if (DataManager.Instance.savedTetrominoList.Count == 0)
         {
             SpawnInitialTetrominos();
@@ -102,6 +111,7 @@ public class GameController : MonoBehaviour
     {
         gridContainer = Instantiate(gridContainPrefab.transform);
         spawnPoints = Instantiate(spawnPointsPrefab.transform);
+        board = Instantiate(boardPrefab.transform);
     }
     public void IncreaseScore(int amount)
     {
@@ -142,7 +152,7 @@ public class GameController : MonoBehaviour
         ChangeColorTileGrid(6, 3);
         ChangeColorTileGrid(3, 6);
 
-        Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 2.08f, -10);
+        Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 2.08f, -10) * 0.8f;
     }
     public void ChangeColorTileGrid(int startX, int startY)
     {
@@ -157,7 +167,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-   
+
     public Vector3 CalculateGridPosition(Vector3 position)
     {
         return new Vector3(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), 0);
@@ -202,13 +212,31 @@ public class GameController : MonoBehaviour
     {
         foreach (Transform tile in tetromino)
         {
-            Vector3 gridPosition = CalculateGridPosition(tile.position);
-            gridPosition.z = -1;
-            PlaceTileInGrid(gridPosition, tile);
-            tile.position = gridPosition;
-            DataManager.Instance.savedTileList.Add(tile.position);
-            DataManager.Instance.SaveTile();
+            //Debug.Log(tile.position);
+            
+           
+            var origin = tile.position;
+            RaycastHit2D hit = Physics2D.Raycast(origin, transform.forward, 10, layerMask);
+            if (hit.collider == null)
+            {
+                Debug.Log("hi");
+            }
+            else
+            {
+                Vector3 gridPosition = CalculateGridPosition(hit.collider.transform.position / 0.8f);
+                gridPosition.z = -1;
+                PlaceTileInGrid(gridPosition, tile);
+                tile.position = hit.collider.transform.position;
+                DataManager.Instance.savedTileList.Add(tile.position);
+                DataManager.Instance.SaveTile();
+            }
+
+            //Debug.Log(tile.position);
+
+            
         }
+        //tetromino.localScale *= 0.8f;
+
     }
     private void SpawnInitialTetrominos()
     {
@@ -309,13 +337,13 @@ public class GameController : MonoBehaviour
     public void TetrominoUsed(GameObject tetromino)
     {
         currentTetrominos.Remove(tetromino);
-        DataManager.Instance.savedTetrominoList.RemoveAll(tetrominoData => tetrominoData.name == tetromino.name );
+        DataManager.Instance.savedTetrominoList.RemoveAll(tetrominoData => tetrominoData.name == tetromino.name);
         DataManager.Instance.SaveTetrominoData();
         if (currentTetrominos.Count == 0)
         {
             // Sinh ngẫu nhiễn các tetromino mới
             SpawnInitialTetrominos();
- 
+
         }
     }
 
@@ -402,7 +430,7 @@ public class GameController : MonoBehaviour
         for (int y = 0; y < height; y++)
         {
             bool isRowFull = true;
-            for(int x = 0; x < width; x++)
+            for (int x = 0; x < width; x++)
             {
                 Transform tile = grid[x, y];
                 if (tile == null || !tile.CompareTag("TileShape"))
@@ -505,7 +533,7 @@ public class GameController : MonoBehaviour
                     {
                         IncreaseScore(DataManager.Instance.ScorePerBlock);
                         DataManager.Instance.ScoreAmount += DataManager.Instance.ScorePerBlock;
-                        tile.DOScale(scaleTile + new Vector3(offset,offset,0), scaleTileTimer);
+                        tile.DOScale(scaleTile + new Vector3(offset, offset, 0), scaleTileTimer);
                         tile.DORotate(tile.localRotation.eulerAngles + new Vector3(0, 0, -180), scaleTileTimer);
                         Destroy(tile.gameObject, timeDestroyTile);
                         DataManager.Instance.RemoveTile(tile.GetComponent<Tile>());
@@ -523,10 +551,10 @@ public class GameController : MonoBehaviour
     public void CheckGameOver()
     {
         bool canAdd = false;
-        
+
         foreach (GameObject tetromino in currentTetrominos)
         {
-            if(tetromino != null)
+            if (tetromino != null)
             {
                 for (int i = 0; i < width + 1 - tetromino.GetComponent<Tetromino>().Width; i++)
                 {
@@ -555,7 +583,7 @@ public class GameController : MonoBehaviour
                         }
                     }
                 }
-            }    
+            }
         }
         if (canAdd)
         {
@@ -578,9 +606,6 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
-  
+
 
 }
-
-
-
